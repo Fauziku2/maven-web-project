@@ -19,7 +19,7 @@ pipeline {
 		}
         stage('deployment') {
 			steps {
-				deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:8090')], contextPath: null, war: '**/*.war'
+				deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:8090')], contextPath: 'maven-web-project2', war: '**/*.war'
 			}
 		}
 	}
